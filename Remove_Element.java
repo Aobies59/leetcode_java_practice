@@ -35,25 +35,4 @@ class Remove_Element {
 
         return k;
     }
-
-    public static void main(String[] args) {
-        final int[] test_array = {3, 3};
-        final int test_val = 5;
-
-
-
-        int k = removeElement(test_array, test_val);
-        System.out.print("[");
-        if (k == 1) {
-            System.out.print(test_array[0]);
-        } else if (k > 1) {
-            for (int i = 0; i < k - 1; i++) {
-                System.out.print(test_array[i] + ", ");
-            }
-            System.out.print(test_array[k - 1]);
-        }
-        System.out.println(']');
-
-        System.out.println(k);
-    }
 }
