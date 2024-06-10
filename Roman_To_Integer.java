@@ -1,5 +1,5 @@
 // Solution to Problem Roman To Integer
-// Runtime beats ~60% of users and memory ~93%
+// Runtime beats ~70% of users and memory ~98%
 
 import java.util.Dictionary;
 import java.util.Hashtable;
@@ -21,12 +21,13 @@ class Roman_To_Integer {
 
         final int string_length = s.length();
         for (int i = string_length - 1; i >= 0; i--) {
+            /**
+             * Error handling. Uncomment when not using it for leetcode
             if (values.get(s.charAt(i)) == null) {
-                System.out.println("Error: not a roman number: " + s.charAt(i));
                 return -1;
             }
+            **/
             int current_value = values.get(s.charAt(i));
-            //System.out.println("Previous value: " + previous_value + ". Current value: " + current_value);
             if (current_value < previous_value) {
                 value_to_subtract += current_value;
             } else {
